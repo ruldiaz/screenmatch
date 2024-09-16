@@ -1,3 +1,4 @@
+import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempos;
 import com.aluracursos.screenmtach.modelos.Pelicula;
 import com.aluracursos.screenmtach.modelos.Serie;
 
@@ -25,5 +26,16 @@ public class Principal {
         casaDragon.setEpisodiosPorTemporada(10);
         System.out.println(casaDragon.getDuracionEnMinutos());
         casaDragon.muestraFichaTecnica();
+
+        Pelicula otraPelicula = new Pelicula();
+        otraPelicula.setNombre("Matrix");
+        otraPelicula.setFechaDeLanzamiento(1998);
+        otraPelicula.setDuracionEnMinutos(120);
+
+        CalculadoraDeTiempos calculadora = new CalculadoraDeTiempos();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(casaDragon);
+        calculadora.incluye(otraPelicula);
+        System.out.println("Tiempo necesario para ver tus titulos favoritos: " + calculadora.getTiempoTotal() + " minutos");
     }
 }
