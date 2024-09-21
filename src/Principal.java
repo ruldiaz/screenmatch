@@ -54,5 +54,6 @@ public class Principal {
         String message = "Hola Mundo";
         int indexPosition = message.indexOf("Hola");
         System.out.println(indexPosition);
+        String words = message.substring(0,5);
     }
 }
