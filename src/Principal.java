@@ -50,5 +50,9 @@ public class Principal {
         episodio.setTotalVisualizaciones(50);
 
         filtroRecomendacion.filtra(episodio);
+
+        String message = "Hola Mundo";
+        int indexPosition = message.indexOf("Hola");
+        System.out.println(indexPosition);
     }
 }
